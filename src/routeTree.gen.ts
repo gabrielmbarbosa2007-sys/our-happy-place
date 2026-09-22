@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjetoAlegriaRouteImport } from './routes/projeto-alegria'
+import { Route as ProjetosAcessibilidadeRouteImport } from './routes/projetos.acessibilidade'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjetoAlegriaRoute = ProjetoAlegriaRouteImport.update({
+  id: '/projeto-alegria',
+  path: '/projeto-alegria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosAcessibilidadeRoute = ProjetosAcessibilidadeRouteImport.update({
+  id: '/projetos/acessibilidade',
+  path: '/projetos/acessibilidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projeto-alegria': typeof ProjetoAlegriaRoute
+  '/projetos/acessibilidade': typeof ProjetosAcessibilidadeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projeto-alegria': typeof ProjetoAlegriaRoute
+  '/projetos/acessibilidade': typeof ProjetosAcessibilidadeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projeto-alegria': typeof ProjetoAlegriaRoute
+  '/projetos/acessibilidade': typeof ProjetosAcessibilidadeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/projeto-alegria' | '/projetos/acessibilidade'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/projeto-alegria' | '/projetos/acessibilidade'
+  id: '__root__' | '/' | '/projeto-alegria' | '/projetos/acessibilidade'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjetoAlegriaRoute: typeof ProjetoAlegriaRoute
+  ProjetosAcessibilidadeRoute: typeof ProjetosAcessibilidadeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projeto-alegria': {
+      id: '/projeto-alegria'
+      path: '/projeto-alegria'
+      fullPath: '/projeto-alegria'
+      preLoaderRoute: typeof ProjetoAlegriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/acessibilidade': {
+      id: '/projetos/acessibilidade'
+      path: '/projetos/acessibilidade'
+      fullPath: '/projetos/acessibilidade'
+      preLoaderRoute: typeof ProjetosAcessibilidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjetoAlegriaRoute: ProjetoAlegriaRoute,
+  ProjetosAcessibilidadeRoute: ProjetosAcessibilidadeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
