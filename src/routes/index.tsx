@@ -20,7 +20,7 @@ import { Reveal } from "@/components/Reveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import escola from "@/assets/escola.jpg";
-import hero from "@/assets/hero-visite-fp.jpg";
+import hero from "@/assets/hero-etec-fp.jpg";
 import placaBraille from "@/assets/placa-braille.jpg";
 import pisoTatil from "@/assets/piso-tatil.jpg";
 import turma from "@/assets/turma.jpg";
@@ -103,10 +103,10 @@ function Index() {
             <Reveal delay={120}>
               <img
                 src={hero}
-                alt="Estudantes do curso de Administração trabalhando juntos em um projeto"
+                alt="Estudantes da Etec Fernando Prestes com uniforme branco trabalhando juntos em um projeto"
                 width={1600}
                 height={1008}
-                className="w-full rounded-3xl border border-primary-foreground/20 shadow-[var(--shadow-lift)]"
+                className="aspect-[16/10] w-full rounded-3xl border border-primary-foreground/25 object-cover shadow-[var(--shadow-lift)]"
               />
             </Reveal>
           </div>
@@ -350,7 +350,7 @@ function Index() {
           <Reveal className="mt-8">
             <Gallery
               images={[
-                { src: hero, alt: "Estudantes de Administração em atividade em sala" },
+                { src: hero, alt: "Estudantes da Etec Fernando Prestes em atividade em sala" },
                 { src: escola, alt: "Pátio da escola com estudantes" },
                 { src: turma, alt: "Turma planejando um projeto em equipe" },
                 { src: pisoTatil, alt: "Piso tátil em corredor escolar" },
