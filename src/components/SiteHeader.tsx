@@ -35,11 +35,11 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
           to="/"
           hash="inicio"
           className={`flex items-center gap-2 font-display text-lg font-extrabold tracking-tight ${
-            scrolled ? "text-primary" : "text-primary-foreground"
+            scrolled ? "text-primary" : "text-foreground"
           }`}
         >
           <span className={`grid size-9 place-items-center rounded-xl text-sm ${
-              scrolled ? "bg-primary text-primary-foreground" : "bg-primary-foreground/20 text-primary-foreground"
+              scrolled ? "bg-primary text-primary-foreground" : "bg-primary-soft text-primary"
             }`}>
             FP
           </span>
@@ -55,7 +55,7 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
                   className={`rounded-full px-3 py-2 text-sm font-medium transition-colors ${
                 scrolled
                   ? "text-muted-foreground hover:bg-primary-soft hover:text-primary"
-                  : "text-primary-foreground/85 hover:bg-primary-foreground/15 hover:text-primary-foreground"
+                  : "text-foreground/80 hover:bg-primary-soft hover:text-primary"
               }`}
             >
               {link.label}
@@ -71,7 +71,7 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
           className={`grid size-11 place-items-center rounded-xl border transition-colors lg:hidden ${
             scrolled
               ? "border-border bg-card text-foreground hover:bg-primary-soft"
-              : "border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground"
+              : "border-border bg-card text-foreground hover:bg-primary-soft"
           }`}
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
