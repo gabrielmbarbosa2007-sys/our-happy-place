@@ -18,10 +18,8 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import escola from "@/assets/escola.jpg";
 import hero from "@/assets/hero-etec-fp.jpg";
 import pisoTatil from "@/assets/piso-tatil.jpg";
-import turma from "@/assets/turma.jpg";
 
 const title = "VISITE FP | Administração e Projetos Integradores – Etec Fernando Prestes";
 const description =
@@ -112,18 +110,8 @@ function Index() {
 
         {/* ETEC */}
         <section id="etec" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div className="max-w-3xl">
             <Reveal>
-              <img
-                src={escola}
-                alt="Pátio de uma escola técnica com estudantes circulando"
-                loading="lazy"
-                width={1408}
-                height={1008}
-                className="w-full rounded-3xl border border-border shadow-[var(--shadow-soft)]"
-              />
-            </Reveal>
-            <Reveal delay={100}>
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
                 Sobre a Etec Fernando Prestes
               </h2>
@@ -178,39 +166,29 @@ function Index() {
 
         {/* TURMA */}
         <section id="turma" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div className="max-w-4xl">
             <Reveal>
               <h2 className="font-display text-3xl font-bold sm:text-4xl">2º ADM – MTEC Manhã</h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mt-4 max-w-3xl text-muted-foreground">
                 Conheça os projetos desenvolvidos pelos estudantes e descubra como os conhecimentos
                 adquiridos em sala de aula podem ser transformados em experiências práticas e
                 projetos com impacto.
               </p>
-              <ol className="mt-8 grid gap-3 sm:grid-cols-4">
+              <ol className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
                 {["APRENDER", "PLANEJAR", "CRIAR", "TRANSFORMAR"].map((step, i) => (
                   <li
                     key={step}
-                    className="rounded-2xl border border-border bg-card p-4 text-center shadow-[var(--shadow-soft)]"
+                    className="flex min-h-20 flex-col items-center justify-center rounded-lg border border-border bg-card px-3 py-3 text-center shadow-[var(--shadow-soft)]"
                   >
-                    <span className="font-display text-xs font-bold text-accent-foreground">
+                    <span className="font-display text-xs font-bold text-muted-foreground">
                       0{i + 1}
                     </span>
-                    <p className="mt-1 font-display text-sm font-extrabold tracking-wide text-primary">
+                    <p className="mt-1 font-display text-sm font-extrabold text-primary">
                       {step}
                     </p>
                   </li>
                 ))}
               </ol>
-            </Reveal>
-            <Reveal delay={100}>
-              <img
-                src={turma}
-                alt="Estudantes reunidos planejando um projeto com post-its"
-                loading="lazy"
-                width={1408}
-                height={1008}
-                className="w-full rounded-3xl border border-border shadow-[var(--shadow-soft)]"
-              />
             </Reveal>
           </div>
         </section>
