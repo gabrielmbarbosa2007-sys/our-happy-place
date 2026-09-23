@@ -28,16 +28,6 @@ export function SiteFooter() {
                 Projeto de Acessibilidade
               </Link>
             </li>
-            <li>
-              <Link to="/projeto-alegria" className="hover:underline">
-                Projeto Alegria
-              </Link>
-            </li>
-            <li>
-              <Link to="/" hash="galeria" className="hover:underline">
-                Galeria
-              </Link>
-            </li>
           </ul>
         </div>
 

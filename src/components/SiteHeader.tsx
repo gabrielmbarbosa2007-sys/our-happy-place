@@ -8,8 +8,6 @@ const links = [
   { label: "Administração", hash: "#administracao" },
   { label: "2º ADM", hash: "#turma" },
   { label: "Projetos", hash: "#projetos" },
-  { label: "Projeto Alegria", hash: "#projeto-alegria" },
-  { label: "Galeria", hash: "#galeria" },
   { label: "Visite FP", hash: "#visite-fp" },
 ];
 

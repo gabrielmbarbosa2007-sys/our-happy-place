@@ -15,13 +15,11 @@ import {
   Users,
 } from "lucide-react";
 
-import { Gallery } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import escola from "@/assets/escola.jpg";
 import hero from "@/assets/hero-etec-fp.jpg";
-import placaBraille from "@/assets/placa-braille.jpg";
 import pisoTatil from "@/assets/piso-tatil.jpg";
 import turma from "@/assets/turma.jpg";
 
@@ -72,13 +70,13 @@ function Index() {
         <section id="inicio" className="relative overflow-hidden bg-hero pb-20 pt-28 sm:pt-32">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr]">
             <Reveal>
-              <p className="inline-flex rounded-full bg-primary-foreground/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground">
+              <p className="inline-flex rounded-full bg-primary-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
                 Administração • Projetos Integradores • Protagonismo Estudantil
               </p>
-              <h1 className="mt-5 font-display text-5xl font-extrabold leading-[1.05] text-primary-foreground sm:text-6xl">
+              <h1 className="mt-5 font-display text-5xl font-extrabold leading-[1.05] text-foreground sm:text-6xl">
                 VISITE FP
               </h1>
-              <p className="mt-5 max-w-xl text-lg text-primary-foreground/85">
+              <p className="mt-5 max-w-xl text-lg text-foreground/80">
                 Conheça o curso de Administração da Etec Fernando Prestes e os projetos
                 desenvolvidos pelos estudantes do 2º ADM – MTEC Manhã.
               </p>
@@ -93,7 +91,7 @@ function Index() {
                 <Link
                   to="/"
                   hash="administracao"
-                  className="inline-flex min-h-12 items-center rounded-full border border-primary-foreground/40 px-6 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-foreground/30 px-6 text-sm font-bold uppercase tracking-wide text-foreground transition-colors hover:bg-secondary"
                 >
                   Sobre o curso
                 </Link>
@@ -106,7 +104,7 @@ function Index() {
                 alt="Estudantes da Etec Fernando Prestes com uniforme branco trabalhando juntos em um projeto"
                 width={1600}
                 height={1008}
-                className="aspect-[16/10] w-full rounded-3xl border border-primary-foreground/25 object-cover shadow-[var(--shadow-lift)]"
+                className="aspect-[16/10] w-full rounded-3xl border border-border object-cover shadow-[var(--shadow-lift)]"
               />
             </Reveal>
           </div>
@@ -229,7 +227,7 @@ function Index() {
               </p>
             </Reveal>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 max-w-2xl">
               <Reveal as="article" className="surface-card surface-card-hover overflow-hidden">
                 <img
                   src={pisoTatil}
@@ -261,60 +259,8 @@ function Index() {
                 </div>
               </Reveal>
 
-              <Reveal as="article" delay={100} className="surface-card surface-card-hover overflow-hidden">
-                <div className="bg-alegria p-8">
-                  <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent-foreground">
-                    Destaque
-                  </p>
-                  <p className="mt-2 font-display text-3xl font-extrabold text-accent-foreground">
-                    PROJETO ALEGRIA
-                  </p>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-muted-foreground">
-                    Um projeto criado pelos alunos do 2º ADM – MTEC Manhã. O material completo do
-                    Projeto Alegria ainda não foi enviado, por isso o conteúdo desta seção está
-                    reservado e será preenchido exatamente com as informações do documento oficial.
-                  </p>
-                  <Link
-                    to="/projeto-alegria"
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-accent px-5 text-sm font-bold text-accent-foreground transition-transform hover:-translate-y-0.5"
-                  >
-                    Conheça o projeto <ArrowRight className="size-4" />
-                  </Link>
-                </div>
-              </Reveal>
             </div>
           </div>
-        </section>
-
-        {/* PROJETO ALEGRIA DESTAQUE */}
-        <section id="projeto-alegria" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <Reveal className="overflow-hidden rounded-3xl border border-accent/40 bg-accent-soft p-8 sm:p-12">
-            <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-accent-foreground">
-              Projeto em destaque
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-extrabold text-accent-foreground sm:text-5xl">
-              PROJETO ALEGRIA
-            </h2>
-            <p className="mt-3 text-lg text-accent-foreground/80">
-              Um projeto criado pelos alunos do 2º ADM – MTEC Manhã.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {["Sobre o projeto", "Objetivo", "Público-alvo", "Como funciona", "Desenvolvimento", "Resultados", "Impacto", "Galeria"].map(
-                (bloco) => (
-                  <div key={bloco} className="rounded-2xl border border-accent/30 bg-card p-5">
-                    <p className="font-display font-bold">{bloco}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">Aguardando o material.</p>
-                  </div>
-                ),
-              )}
-            </div>
-            <p className="mt-8 max-w-2xl text-sm text-accent-foreground/80">
-              Envie o arquivo do Projeto Alegria e estes blocos serão preenchidos com as informações
-              originais do documento — sem nada inventado.
-            </p>
-          </Reveal>
         </section>
 
         {/* POR QUE */}
@@ -337,37 +283,14 @@ function Index() {
           </div>
         </section>
 
-        {/* GALERIA */}
-        <section id="galeria" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <Reveal>
-            <h2 className="font-display text-3xl font-bold sm:text-4xl">Galeria</h2>
-            <p className="mt-3 max-w-2xl text-muted-foreground">
-              Imagens da escola, da turma e dos temas trabalhados nos projetos. Clique para ampliar.
-              Fotos reais da turma e dos projetos podem substituir estas imagens assim que forem
-              enviadas.
-            </p>
-          </Reveal>
-          <Reveal className="mt-8">
-            <Gallery
-              images={[
-                { src: hero, alt: "Estudantes da Etec Fernando Prestes em atividade em sala" },
-                { src: escola, alt: "Pátio da escola com estudantes" },
-                { src: turma, alt: "Turma planejando um projeto em equipe" },
-                { src: pisoTatil, alt: "Piso tátil em corredor escolar" },
-                { src: placaBraille, alt: "Placa de sala com inscrição em braille" },
-              ]}
-            />
-          </Reveal>
-        </section>
-
         {/* VISITE FP */}
         <section id="visite-fp" className="bg-hero py-20">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <Reveal>
-              <h2 className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">
+              <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
                 Venha conhecer de perto
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/85">
+              <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
                 Durante o VISITE FP, você poderá conhecer os projetos desenvolvidos pelos
                 estudantes, entender como funciona o curso de Administração e descobrir as
                 experiências que fazem parte da formação dos alunos.
@@ -379,7 +302,7 @@ function Index() {
               >
                 Conheça a Etec Fernando Prestes <ArrowRight className="size-4" />
               </Link>
-              <p className="mt-6 text-sm text-primary-foreground/70">
+              <p className="mt-6 text-sm text-muted-foreground">
                 Data, horário, local e programação do evento ainda não foram informados.
               </p>
             </Reveal>
