@@ -261,51 +261,6 @@ function Index() {
           </div>
         </section>
 
-        {/* VISITE FP */}
-        <section id="visite-fp" className="bg-hero py-20">
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-            <Reveal>
-              <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-                Venha conhecer de perto
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
-                Durante o VISITE FP, você poderá conhecer os projetos desenvolvidos pelos
-                estudantes, entender como funciona o curso de Administração e descobrir as
-                experiências que fazem parte da formação dos alunos.
-              </p>
-              <Link
-                to="/"
-                hash="etec"
-                className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-accent px-7 text-sm font-bold uppercase tracking-wide text-accent-foreground transition-transform hover:-translate-y-0.5"
-              >
-                Conheça a Etec Fernando Prestes <ArrowRight className="size-4" />
-              </Link>
-              <p className="mt-6 text-sm text-muted-foreground">
-                Data, horário, local e programação do evento ainda não foram informados.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="mx-auto max-w-5xl px-4 py-20 text-center sm:px-6">
-          <Reveal>
-            <h2 className="font-display text-3xl font-extrabold sm:text-5xl">
-              O FUTURO COMEÇA COM UMA IDEIA.
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Conheça o trabalho dos estudantes do 2º ADM – MTEC Manhã e descubra o que é possível
-              criar quando conhecimento, criatividade e colaboração se encontram.
-            </p>
-            <Link
-              to="/"
-              hash="projetos"
-              className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-7 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:-translate-y-0.5"
-            >
-              Explorar os projetos <ArrowRight className="size-4" />
-            </Link>
-          </Reveal>
-        </section>
       </main>
 
       <SiteFooter />

@@ -8,7 +8,6 @@ const links = [
   { label: "Administração", hash: "#administracao" },
   { label: "2º ADM", hash: "#turma" },
   { label: "Projetos", hash: "#projetos" },
-  { label: "Visite FP", hash: "#visite-fp" },
 ];
 
 export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
