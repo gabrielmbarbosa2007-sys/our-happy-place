@@ -67,11 +67,7 @@ export function SiteHeader({ overHero = false }: { overHero?: boolean }) {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className={`grid size-11 place-items-center rounded-xl border transition-colors lg:hidden ${
-            scrolled
-              ? "border-border bg-card text-foreground hover:bg-primary-soft"
-              : "border-border bg-card text-foreground hover:bg-primary-soft"
-          }`}
+          className="grid size-11 place-items-center rounded-xl border border-primary bg-primary text-primary-foreground transition-colors hover:bg-primary/90 lg:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
