@@ -131,9 +131,9 @@ function Index() {
                   { icon: Users, t: "Ambiente colaborativo", d: "Turmas organizadas em equipes de trabalho." },
                 ].map((item) => (
                   <li key={item.t} className="surface-card surface-card-hover p-5">
-                    <item.icon className="size-6 text-primary" aria-hidden="true" />
+                    <item.icon className="size-6 text-card-foreground" aria-hidden="true" />
                     <p className="mt-3 font-display font-bold">{item.t}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.d}</p>
+                    <p className="mt-1 text-sm text-card-foreground/75">{item.d}</p>
                   </li>
                 ))}
               </ul>
@@ -153,11 +153,11 @@ function Index() {
             <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {cursoTemas.map((tema, i) => (
                 <Reveal as="li" key={tema.title} delay={i * 60} className="surface-card surface-card-hover p-6">
-                  <span className="grid size-11 place-items-center rounded-xl bg-primary-soft text-primary">
+                  <span className="grid size-11 place-items-center rounded-xl bg-card-foreground/15 text-card-foreground">
                     <tema.icon className="size-5" aria-hidden="true" />
                   </span>
                   <p className="mt-4 font-display font-bold">{tema.title}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{tema.text}</p>
+                  <p className="mt-2 text-sm text-card-foreground/75">{tema.text}</p>
                 </Reveal>
               ))}
             </ul>
@@ -178,12 +178,12 @@ function Index() {
                 {["APRENDER", "PLANEJAR", "CRIAR", "TRANSFORMAR"].map((step, i) => (
                   <li
                     key={step}
-                    className="flex min-h-20 flex-col items-center justify-center rounded-lg border border-border bg-card px-3 py-3 text-center shadow-[var(--shadow-soft)]"
+                    className="flex min-h-20 flex-col items-center justify-center rounded-lg border border-primary bg-card px-3 py-3 text-center text-card-foreground shadow-[var(--shadow-soft)]"
                   >
-                    <span className="font-display text-xs font-bold text-muted-foreground">
+                    <span className="font-display text-xs font-bold text-card-foreground/70">
                       0{i + 1}
                     </span>
-                    <p className="mt-1 font-display text-sm font-extrabold text-primary">
+                    <p className="mt-1 font-display text-sm font-extrabold">
                       {step}
                     </p>
                   </li>
@@ -217,20 +217,20 @@ function Index() {
                 />
                 <div className="p-6">
                   <h3 className="font-display text-xl font-bold">Acessibilidade na escola</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="mt-2 text-sm text-card-foreground/75">
                     Adaptação do ambiente escolar para pessoas com deficiência visual, com placas em
                     braille na numeração das salas e implementação e conserto de pisos táteis.
                   </p>
                   <p className="mt-3 text-sm">
                     <strong className="font-display">Objetivo:</strong>{" "}
-                    <span className="text-muted-foreground">
+                    <span className="text-card-foreground/75">
                       planejar a implementação de recursos que auxiliem na mobilidade de deficientes
                       visuais, integrando conhecimentos do curso técnico em Administração.
                     </span>
                   </p>
                   <Link
                     to="/projetos/acessibilidade"
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-card-foreground px-5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
                   >
                     Conheça o projeto <ArrowRight className="size-4" />
                   </Link>
@@ -252,9 +252,9 @@ function Index() {
             <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
               {porque.map((item, i) => (
                 <Reveal as="li" key={item.title} delay={i * 60} className="surface-card surface-card-hover p-6">
-                  <item.icon className="size-6 text-primary" aria-hidden="true" />
+                  <item.icon className="size-6 text-card-foreground" aria-hidden="true" />
                   <p className="mt-3 font-display text-sm font-extrabold tracking-wide">{item.title}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
+                  <p className="mt-2 text-sm text-card-foreground/75">{item.text}</p>
                 </Reveal>
               ))}
             </ul>
