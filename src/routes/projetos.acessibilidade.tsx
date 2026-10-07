@@ -189,7 +189,7 @@ function Acessibilidade() {
                 >
                   <span className="font-display font-bold text-card-foreground">{data}</span>
                   <span className="text-card-foreground">{atividade}</span>
-                  <span className="text-sm">{responsavel}</span>
+                  <span className="text-sm text-card-foreground">{responsavel}</span>
                 </li>
               ))}
             </ul>
