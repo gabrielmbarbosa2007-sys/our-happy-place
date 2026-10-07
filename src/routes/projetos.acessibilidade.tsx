@@ -58,7 +58,7 @@ function Bloco({ title: t, children }: { title: string; children: React.ReactNod
   return (
     <Reveal as="section" className="surface-card p-6 sm:p-8">
       <h2 className="font-display text-2xl font-bold">{t}</h2>
-      <div className="mt-3 space-y-3 text-muted-foreground">{children}</div>
+      <div className="mt-3 space-y-3 text-card-foreground/80">{children}</div>
     </Reveal>
   );
 }
@@ -148,12 +148,12 @@ function Acessibilidade() {
 
           <Bloco title="Problema de pesquisa">
             <p>
-              <strong className="font-display text-foreground">Arrecadação:</strong> o capital
+              <strong className="font-display text-card-foreground">Arrecadação:</strong> o capital
               monetário é um dos principais recursos necessários, e não há garantia de que as
               pessoas se disponham a ajudar na medida do que foi planejado.
             </p>
             <p>
-              <strong className="font-display text-foreground">Implementação:</strong> tirar do
+              <strong className="font-display text-card-foreground">Implementação:</strong> tirar do
               papel os pisos táteis e as placas exige tempo, esforço e aprovação detalhada da
               coordenação da escola.
             </p>
@@ -185,11 +185,11 @@ function Acessibilidade() {
               {cronograma.map(([data, atividade, responsavel]) => (
                 <li
                   key={data}
-                  className="grid gap-1 rounded-xl border border-border bg-secondary/50 p-4 sm:grid-cols-[6rem_1fr_auto] sm:items-center"
+                  className="grid gap-1 rounded-xl border border-card-foreground/20 bg-card-foreground/10 p-4 sm:grid-cols-[6rem_1fr_auto] sm:items-center"
                 >
-                  <span className="font-display font-bold text-primary">{data}</span>
-                  <span className="text-foreground">{atividade}</span>
-                  <span className="text-sm">{responsavel}</span>
+                  <span className="font-display font-bold text-card-foreground">{data}</span>
+                  <span className="text-card-foreground">{atividade}</span>
+                  <span className="text-sm text-card-foreground">{responsavel}</span>
                 </li>
               ))}
             </ul>
@@ -197,12 +197,12 @@ function Acessibilidade() {
 
           <Bloco title="Recursos necessários">
             <p>
-              <strong className="font-display text-foreground">Dinheiro:</strong> estima-se para
+              <strong className="font-display text-card-foreground">Dinheiro:</strong> estima-se para
               realizar todo o projeto um valor entre R$ 2.250,00 e R$ 4.500,00, destinado ao
               conserto dos pisos táteis e à implementação das placas em braille.
             </p>
             <p>
-              <strong className="font-display text-foreground">Recursos manuais:</strong> caso não
+              <strong className="font-display text-card-foreground">Recursos manuais:</strong> caso não
               seja possível arrecadar a quantia necessária, o plano alternativo é produzir as placas
               em braille manualmente, com impressão 3D ou aplicando as células em braille sobre
               placas de plástico mais econômicas.
@@ -234,7 +234,7 @@ function Acessibilidade() {
               {equipe.map((nome) => (
                 <li
                   key={nome}
-                  className="rounded-full bg-primary-soft px-4 py-2 text-sm font-medium text-primary"
+                  className="rounded-full bg-card-foreground/15 px-4 py-2 text-sm font-medium text-card-foreground"
                 >
                   {nome}
                 </li>

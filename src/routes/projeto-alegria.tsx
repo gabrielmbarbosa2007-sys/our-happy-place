@@ -58,8 +58,8 @@ function ProjetoAlegria() {
         </section>
 
         <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-          <Reveal className="rounded-2xl border border-accent/40 bg-accent-soft p-6">
-            <p className="text-accent-foreground">
+          <Reveal className="rounded-2xl border border-primary/30 bg-primary-soft p-6">
+            <p className="text-foreground">
               O material completo do Projeto Alegria ainda não foi anexado. Para manter as
               informações fiéis ao documento original, nada foi inventado: os blocos abaixo estão
               reservados e serão preenchidos assim que o arquivo for enviado.
@@ -70,8 +70,8 @@ function ProjetoAlegria() {
             {blocos.map(([t, d], i) => (
               <Reveal as="li" key={t} delay={i * 50} className="surface-card p-6">
                 <h2 className="font-display text-lg font-bold">{t}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{d}</p>
-                <p className="mt-3 inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">
+                <p className="mt-2 text-sm text-card-foreground/75">{d}</p>
+                <p className="mt-3 inline-flex rounded-full bg-card-foreground/15 px-3 py-1 text-xs font-semibold text-card-foreground">
                   Aguardando o material
                 </p>
               </Reveal>
